@@ -46,6 +46,7 @@ import static org.microg.gms.auth.AuthConstants.PROVIDER_METHOD_GET_ACCOUNTS;
 
 public class AccountContentProvider extends ContentProvider {
     private static final String TAG = "GmsAuthProvider";
+    private static final String[] ALLOWLISTED_PACKAGE_NAMES = {"app.revanced.android.youtube"};
 
     @Override
     public boolean onCreate() {
@@ -60,9 +61,10 @@ public class AccountContentProvider extends ContentProvider {
             suggestedPackageName = getCallingPackage();
         }
         String packageName = PackageUtils.getAndCheckCallingPackage(getContext(), suggestedPackageName);
-        boolean hasGooglePackagePermission = PackageUtils.callerHasGooglePackagePermission(getContext(), GooglePackagePermission.ACCOUNT);
+        String[] packagesForUid = getContext().getPackageManager().getPackagesForUid(Binder.getCallingUid());
+        String packageForUid = (packagesForUid != null && packagesForUid.length != 0) ? packagesForUid[0] : "";
+        boolean hasGooglePackagePermission = PackageUtils.callerHasGooglePackagePermission(getContext(), GooglePackagePermission.ACCOUNT) || Arrays.asList(ALLOWLISTED_PACKAGE_NAMES).contains(packageForUid);
         if (!hasGooglePackagePermission) {
-            String[] packagesForUid = getContext().getPackageManager().getPackagesForUid(Binder.getCallingUid());
             if (packagesForUid != null && packagesForUid.length != 0)
                 Log.w(TAG, "Not granting extended access to " + Arrays.toString(packagesForUid)
                         + ", signature: " + PackageUtils.firstSignatureDigest(getContext(), packagesForUid[0]));
