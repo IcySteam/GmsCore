@@ -6,6 +6,12 @@ microG Services is a FLOSS (Free/Libre Open Source Software) framework to allow 
 
 ### Please refer to the [wiki](https://github.com/microg/GmsCore/wiki) for downloads and instructions
 
+About this fork (https://github.com/IcySteam/GmsCore)
+-------
+This repository is a fork of [ReVanced GmsCore](https://github.com/ReVanced/GmsCore) to allow the ReVanced GmsCore to be installed and used under a wider range of
+situations.
+-------
+
 About this fork
 -------
 This repository is a fork of [microG GmsCore](https://github.com/microg/GmsCore) to allow patched Google apps to run without root and under a different package name using GmsCore instead of Google Play Services, via the "GmsCore support" patch by ReVanced from [ReVanced Patches](https://github.com/revanced/revanced-patches) with the minimum amount of changes necessary to upstream.
