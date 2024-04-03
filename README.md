@@ -15,6 +15,7 @@ situations.
 About this fork
 -------
 This repository is a fork of [microG GmsCore](https://github.com/microg/GmsCore) to allow patched Google apps to run without root and under a different package name using GmsCore instead of Google Play Services, via the "GmsCore support" patch by ReVanced from [ReVanced Patches](https://github.com/revanced/revanced-patches) with the minimum amount of changes necessary to upstream.
+-------
 
 Goals of this fork:
 - Run next to an existing GMS installation such as [microG GmsCore](https://github.com/microg/GmsCore) or Google Play Services.
