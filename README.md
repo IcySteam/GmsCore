@@ -13,9 +13,9 @@ microG Services is a FLOSS (Free/Libre Open Source Software) framework to allow 
 
 If you'd like to help translate microG, take a look at [TRANSLATION](TRANSLATION.md).
 
-About this [fork](https://github.com/IcySteam/GmsCore) by IcySteam
+About this fork: [IcySteam/GmsCore](https://github.com/IcySteam/GmsCore)
 -------
-This repository is a fork of [ReVanced GmsCore](https://github.com/ReVanced/GmsCore) that allows ReVanced GmsCore to be installed and used on more devices.
+This repository is a fork of [ReVanced GmsCore](https://github.com/ReVanced/GmsCore) that allows ReVanced GmsCore to be installed and used on devices with stricter sideloading restrictions.
 -------
 
 About this fork
