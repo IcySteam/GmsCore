@@ -47,7 +47,9 @@ import static org.microg.gms.auth.AuthConstants.PROVIDER_METHOD_GET_ACCOUNTS;
 public class AccountContentProvider extends ContentProvider {
     private static final String TAG = "GmsAuthProvider";
     private static final String[] ALLOWLISTED_PACKAGE_NAMES = {"app.revanced.android.youtube",
-                                                               "app.revanced.android.apps.youtube.music"};
+                                                               "app.revanced.android.apps.youtube.music",
+                                                               "app.revanced.android.photos"
+                                                              };
 
     @Override
     public boolean onCreate() {
